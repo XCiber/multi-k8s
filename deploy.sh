@@ -1,6 +1,6 @@
-docker build -t xciber/multi-client:latest -t xciber/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t xciber/multi-server:latest -t xciber/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t xciber/multi-worker:latest -t xciber/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t xciber/multi-client:latest -t xciber/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t xciber/multi-server:latest -t xciber/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t xciber/multi-worker:latest -t xciber/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push xciber/multi-client:latest
 docker push xciber/multi-server:latest
